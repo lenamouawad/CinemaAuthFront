@@ -1,0 +1,8 @@
+<div class="list-group">
+    <a id="header" class="list-group-item list-group-item-action">
+        Cliques sur une séance pour réserver un billet !
+      </a>
+    <ng-container *ngFor="let screening of screenings">
+        <a [routerLink]="['/Ticket',screening.id]" class="list-group-item list-group-item-action">{{screening.dateTime | date:'dd LLLL yyyy h:mm a'}}</a>
+    </ng-container>
+</div>

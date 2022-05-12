@@ -1,0 +1,42 @@
+<div class="ReviewPage">
+    <div class="MovieInfo">
+        <div class="card">
+            <img class="card-img-top" src={{movie.imgUrl}} alt=" Card image cap ">
+            <div class="card-body ">
+                <h5 class="card-title ">{{movie.name}}</h5>
+                <p class="card-text ">Description du film</p>
+                <button type="button" class="btn btn-primary btn-lg " style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="AjouterReview()">Ajoutez un review</button>
+            </div>
+        </div>
+    </div>
+
+    <ng-container *ngIf="!ajouterReview">
+        <div class="cardList ">
+            <ng-container *ngFor="let review of reviews ">
+                <div class="card1" style="width: 15rem; height: 15rem; ">
+                    <div class="card-body ">
+                        <h5 class="card-title ">{{review.username}}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted "></h6>
+                        <p class="card-text ">{{review.reviewText}} </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="ajouterReview">
+        <div class="cardList ">
+            <div class="card" style="width: 15rem; height: 15rem; ">
+                <form #reviewForm="ngForm" (ngSubmit)="SauveguarderReview(reviewForm)">
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Exprimez vous !!</label>
+                        <textarea name="reviewText" class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="addedReview.reviewText" required></textarea>
+                        <button type="submit" class="btn btn-primary btn-lg " style="padding-left: 2.5rem; padding-right: 2.5rem;">Ajouter</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </ng-container>
+
+
+</div>

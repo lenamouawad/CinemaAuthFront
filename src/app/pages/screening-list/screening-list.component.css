@@ -1,0 +1,14 @@
+.list-group {
+    text-align: center;
+}
+
+div {
+    margin-top: 5%;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+#header {
+    background-color: rgb(33, 3, 61);
+    color: white;
+}

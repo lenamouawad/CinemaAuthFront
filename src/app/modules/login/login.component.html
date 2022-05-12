@@ -1,0 +1,69 @@
+<!--<div>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <label for="username ">Email</label>
+        <input type="email" id="username" name="username" [(ngModel)]="credentials.username" required>
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password" [(ngModel)]="credentials.password" required>
+        <div *ngIf="invalidLogin">Mauvais nom d'utilisateur ou mot de passe</div>
+        <button type="submit" [disabled]="!loginForm.valid">Se connecter</button>
+    </form>
+</div> -->
+<section class="vh-95">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="./assets/images/login.png" class="img-fluid" alt="Sample image">
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <ng-container *ngIf="!isUserAuthenticated()">
+                    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <p class="lead fw-normal mb-0 me-3"> CONNECTEZ VOUS POUR UN MONDE MEILLEUR</p>
+                        </div>
+
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0"></p>
+                        </div>
+                        <div *ngIf="invalidLogin">Votre nom d'utilisateur ou mot de passe n'est pas correcte</div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="username" name="username" class="form-control form-control-lg" placeholder="Entrez un nom d'utilisateur" [(ngModel)]="credentials.username" required/>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <input type="password" name="password" id="password" class="form-control form-control-lg" placeholder="Entrez un mot de passe" [(ngModel)]="credentials.password" required>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center">
+                            <!-- Checkbox -->
+                            <div class="form-check mb-0">
+                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                <label class="form-check-label" for="form2Example3">Se souvenir de moi
+                                </label>
+                            </div>
+                            <a href="#!" class="text-body">Mot de passe oublié? {{connected}}</a>
+                        </div>
+
+                        <div class="text-center text-lg-start mt-4 pt-2">
+                            <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Se connecter</button>
+                            <p class="small fw-bold mt-2 pt-1 mb-0">Vous n'avez pas encore un compte?</p>
+                            <div class="create" (click)="goToInscription()"><a class="link-danger">Créez un compte</a></div>
+                        </div>
+                    </form>
+                </ng-container>
+
+                <ng-container *ngIf="isUserAuthenticated()">
+                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                        <p class="lead fw-normal mb-0 me-3"> VOUS ETES CONNECTES</p>
+                    </div>
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button type="button" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" (click)="logout()">Se déconnecter</button>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+    </div>
+</section>

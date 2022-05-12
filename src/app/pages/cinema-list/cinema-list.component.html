@@ -1,0 +1,8 @@
+<div class="list-group">
+    <a id="header" class="list-group-item list-group-item-action">
+      Choisi ta ville
+    </a>
+    <ng-container *ngFor="let cinema of cinemas">
+        <app-cinema [cinema]="cinema"></app-cinema>
+    </ng-container>
+</div>

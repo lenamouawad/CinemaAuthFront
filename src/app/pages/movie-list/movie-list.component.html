@@ -1,0 +1,7 @@
+<ng-container class="moviepagecontainer">
+    <ng-container id="cardsContainer" *ngFor=" let movie of movies ">
+        <app-movie [movie]="movie" [cinemaId]="cinemaId"></app-movie>
+        <!--{{movie.name}} -->
+    </ng-container>
+    <!--<button type="button " class="btn ">Back</button>-->
+</ng-container>

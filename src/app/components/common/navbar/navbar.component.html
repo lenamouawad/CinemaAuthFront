@@ -1,0 +1,46 @@
+<div class="emptyrow">
+    <!-- Three lines menu-->
+    <!-- Liste icones-->
+    <div class="card ">
+        <ul class="list-group list-group-horizontal-md">
+            <li class="list-group-item" routerLink="">
+                <img class="icone" src="./assets/icons/Home.png " />
+                <a class="links">
+                   ACCUEIL
+                </a>
+            </li>
+            <li class="list-group-item" routerLink="../../pages/cinema-list">
+                <img class="icone" src="./assets/icons/Movies.png " />
+                <a class="links">FILMS
+                </a>
+            </li>
+            <li class="list-group-item" routerLink="../../pages/cinema-list">
+                <img class="icone " src="./assets/icons/Reservations.png" />
+                <a class="links">RESERVATIONS
+                </a>
+            </li>
+            <li class="list-group-item" routerLink="../../pages/cinema-list">
+                <img class="icone " src="./assets/icons/Reviews.png " />
+                <a class="links">MES REVIEWS
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- Icones settings et deconnexion-->
+    <div class="rightIcons">
+        <!-- <a routerLink="['/MoviesInCinema', '61a88eb80974a6f6e9ee92e7'] ">-->
+        <!--<div class="UserName">
+            <div *ngIf="connected">Connecté</div>
+        </div>-->
+        <a [routerLink]="['./login'] ">
+            <img class="iconeHeader " src="./assets/icons/Login.png " />
+        </a>
+        <a [routerLink]="">
+            <img class="iconeHeader " src="./assets/icons/SettingsHeader.png" />
+        </a>
+    </div>
+</div>
+
+<div class="colvide ">
+</div>
+<!--Fin navbar-->

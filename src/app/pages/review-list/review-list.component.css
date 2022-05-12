@@ -1,0 +1,38 @@
+.cardList {
+    display: flex;
+    justify-content: center;
+    padding-top: 10%;
+    /*background-color: blue;*/
+    width: 60%;
+}
+
+.MovieInfo {
+    /*background-color: yellow;*/
+    width: 40%;
+}
+
+.ReviewPage {
+    /*background: pink;*/
+    display: flex;
+    height: 95vh;
+    width: 100%;
+    flex-direction: row;
+}
+
+img {
+    width: 50%;
+}
+
+.card {
+    margin-top: 5%;
+    margin-left: 5%;
+    border-style: none;
+}
+
+.card1 {
+    margin-top: 5%;
+    margin-left: 5%;
+    border-style: solid;
+    border-radius: 5%;
+    border-color: gray;
+}

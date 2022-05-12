@@ -1,0 +1,11 @@
+<div class="card">
+    <img class="card-img-top" src={{movie.imgUrl}} alt="Card image cap ">
+    <div class="card-body ">
+        <h5 class="card-title ">{{movie.name}}</h5>
+        <p class="card-text ">Description du film</p>
+        <div class="lesBoutons">
+            <a [routerLink]="['/MoviesInCinema', cinemaId, 'screenings', movie.id]" class="btn">Séances</a>
+            <a [routerLink]="['/MovieReviews', movie.id]" class="btn">Reviews</a>
+        </div>
+    </div>
+</div>

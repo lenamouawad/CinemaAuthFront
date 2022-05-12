@@ -1,0 +1,13 @@
+#cardsContainer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-content: center;
+}
+
+.moviepagecontainer {
+    display: flex;
+    justify-content: space-between;
+}
